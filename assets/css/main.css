@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.8;
+    scroll-behavior: smooth;
+
+}
+.background
+{
+    background-color: #fff;
+    box-shadow: 5px 5px 5px #888888;
+    animation: identifier ease .4s;
+}
+@keyframes identifier {
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+#about, #portfolio, #contact{
+    scroll-margin-top: 42px;
+}
+#header
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+#header ul li{
+    display: inline-block;
+    margin-left: -5px;
+}
+#header ul li a{
+    padding: 0 16px;
+    display: block;
+    line-height: 42px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+}
+#header ul li i{
+    width: 18px;
+}
+#header ul li:hover{
+    background-color: #ccc;
+}
+#header ul li:hover a{
+    color: #000;
+}
+
+#header .search a{
+    padding: 0 16px;
+    line-height: 42px;
+    display: block;
+}
+
+#header .search:hover{
+    background-color: red;
+}
+#header .search:hover a{
+    color:#fff;
+}
+
+
+/* PHẦN BANNER */
+#banner
+{
+    position: relative;
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    opacity: 0.8;
+}
+#banner .logo{
+    position: absolute;
+    padding: 8px 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 10px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    animation: opaci ease 1s;
+}
+@keyframes opaci{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+#main
+{
+
+    text-align: center;
+}
+.section
+{
+    margin-top: 64px;
+    color: #777;
+    font-size: 14px;
+}
+.about, .rate, .mywork, .contact-content
+{
+    padding: 0 164px;
+}
+.section .heading
+{
+    font-size: 24px;
+}
+.section .title{
+    font-style: italic;
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+
+/* PHẦN ABOUT */
+.section-content .section-content-para1
+{
+    margin: 15px 0;
+    text-align: justify;
+}
+.section-content .section-content-para2
+{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.content-img img
+{
+    width: 426px;
+    opacity: 0.7;
+}
+.content-img img:hover{
+    opacity: 1;
+}
+.section-content-para2 .my-name
+{
+    margin: 15px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.my-name i{
+    width: 30px;
+}
+.section-content-para2 .para
+{
+    margin: 15px 0;
+    width: 426px;
+    text-align: justify;
+}
+
+
+/* PHẦN RATE */
+.really{
+    margin: 50px 0;
+    font-size: 16px;
+}
+
+.chart{
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+.chart .skill
+{
+    color: #777;
+    letter-spacing: 10px;
+    font-size: 14px;
+}
+.chart .column{
+    width: 100%;
+    background-color: #ccc;
+    margin-top: 20px;
+    height: 35px;
+}
+.column-black{
+    height: 100%;
+    background-color: #616161;
+    width: var(--black);
+    text-align: center;
+    color: #fff;
+    line-height: 35px;
+}
+
+
+/* PHẦN PORTFOLIO */
+.portfolio{
+    margin-top: 64px;
+}
+.portfolio .number
+{
+    height: 134px;
+    background-color: #616161;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.opa{
+    animation: opaci ease 1s;
+}
+.number .number-item
+{
+    color: #fff;
+}
+.number-plus
+{
+    font-size: 18px;
+}
+.portfolio-img{
+    background-image: url("../img/portfolio.jpg");
+    height: 400px;
+    position: relative;
+    background-position: center;
+    opacity: 0.8;
+}
+.text-img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #fff;
+    letter-spacing: 10px;
+}
+
+
+/* PHẦN MYWORK */
+.mywork-img
+{
+    height: 360px;
+    margin: 0 36px;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+.mywork-img img{
+    width: 220px;
+}
+.mywork-img img:hover{
+    opacity: 0.6;
+}
+.mywork-btn button
+{
+    margin-top: 64px;
+    font-size: 16px;
+    padding: 18px 16px;
+    border: none;
+    background-color: #f1f1f1;
+   
+}
+.mywork-btn button:hover
+{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+
+/* PHẦN CONTACT */
+.contact-img{
+    margin-top: 80px;
+}
+.contact-img{
+    background-image: url("../img/contact.jpg");
+    background-position: center;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    position: relative;
+}
+.contact-content
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 54px;
+}
+.map{
+    flex: 1;
+}
+.map img
+{
+    width: 282px;
+    border-radius: 6px;
+}
+.right
+{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 18px;
+    margin: 16px 0;
+    flex: 2;
+}
+.right>p>i{
+    width: 30px;
+}
+.right form label
+{
+    display: block;
+}
+form{
+    width: 600px;
+}
+form input{
+    height: 45px;
+    padding: 8px;
+}
+.text-email{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.text-email input{
+    width: 292px;
+}
+.message input
+{
+    display: block;
+    width: 100%;
+}
+form button{
+    height: 40px;
+    width: 160px;
+    border: none;
+    float: right;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #000;
+    font-size: 15px;
+}
+form button:hover{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+button i{
+    width: 20px;
+}
+
+
+/* PHẦN FOOTER */
+#footer{
+    margin-top: 144px;
+    height: 260px;
+    background-color: #000;
+    opacity: 0.6;
+    padding-top: 70px;
+}
+#footer:hover
+{
+    opacity: 1;
+}
+
+#footer>.to-the-top>a{
+    padding: 12px;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    color: #000;
+}
+#footer .to-the-top a:hover{
+    background-color: #ccc;
+}
+#footer .to-the-top i{
+    margin-right: 10px;
+}
+
+.social
+{
+    color: #fff;
+    font-size: 24px;
+    margin: 16px 0;
+    letter-spacing: 2px;
+}
+.social>i:hover
+{
+    color: #777;
+    cursor: pointer;
+}
+.copy-right{
+    color: #fff;
+    font-size: 14px;
+}
+.copy-right a
+{
+    text-decoration: underline;
+}
+.copy-right a:hover{
+    color: green;
+    cursor: pointer;
+}
